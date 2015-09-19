@@ -41,7 +41,7 @@ class MyStack:
     >>> stack.peek()
     42
     >>> stack.size
-    1
+    0
 
     .. warning::
 
