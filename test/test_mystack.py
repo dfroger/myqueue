@@ -8,7 +8,7 @@ class TestMyStack(unittest.TestCase):
         stack = myqueue.MyStack()
         self.assertEqual(stack.size, 0)
 
-    def test_add(self):
+    def test_add_and_peek_one_item(self):
         # Create empty stack
         stack = myqueue.MyStack()
 
@@ -16,11 +16,32 @@ class TestMyStack(unittest.TestCase):
         stack.add(42)
         self.assertEqual(stack.size, 1)
 
-        # Peek item
+        # Peek item 42
         item = stack.peek()
         self.assertEqual(stack.size, 0)
+        self.assertEqual(item, 42)
 
+    def test_add_and_peek_two_items(self):
+        # Create empty stack
+        stack = myqueue.MyStack()
 
+        # Add item 42
+        stack.add(42)
+        self.assertEqual(stack.size, 1)
+
+        # Add item 43
+        stack.add(43)
+        self.assertEqual(stack.size, 2)
+
+        # Peek item 43
+        item = stack.peek()
+        self.assertEqual(stack.size, 1)
+        self.assertEqual(item, 43)
+
+        # Peek item 43
+        item = stack.peek()
+        self.assertEqual(stack.size, 0)
+        self.assertEqual(item, 42)
 
 if __name__ == '__main__':
     unittest.main()
