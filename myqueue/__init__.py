@@ -6,3 +6,4 @@ __version_full__ = __version__
 
 from .mystack import MyStack
 from .myqueue import MyQueue
+from .error import Empty

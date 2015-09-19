@@ -43,5 +43,13 @@ class TestMyStack(unittest.TestCase):
         self.assertEqual(stack.size, 0)
         self.assertEqual(item, 42)
 
+    def test_peek_empty_stack(self):
+        # Create empty stack
+        stack = myqueue.MyStack()
+
+        msg = "Can't peek item from empty stack"
+        with self.assertRaisesRegexp(myqueue.Empty, msg):
+            stack.peek()
+
 if __name__ == '__main__':
     unittest.main()
