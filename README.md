@@ -19,3 +19,18 @@ Run the test:
 Uninstall `myqueue`:
 
     pip uninstall myqueue
+
+## Writting documentation
+
+Install `sphinx`:
+
+    conda install sphinx sphinx_rtd_theme
+
+Build the doc:
+
+    cd doc
+    make html
+
+View the doc:
+
+    firefox _build/html/index.html
