@@ -1,8 +1,11 @@
 #!/usr/bin/env python
 
+from .mystack import MyStack
+
 class MyQueue:
     def __init__(self):
         self._size = 0
+        self._incoming = MyStack()
 
     @property
     def size(self):

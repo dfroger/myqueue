@@ -21,3 +21,6 @@ class TestMyQueue(unittest.TestCase):
         item = queue.peek()
         self.assertEqual(queue.size, 0)
         #self.assertEqual(item, 42)
+
+if __name__ == '__main__':
+    unittest.main()
