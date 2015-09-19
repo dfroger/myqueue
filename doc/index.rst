@@ -6,14 +6,24 @@
 Welcome to myqueue's documentation!
 ###################################
 
+`myqueue` implemented a queue with 2 stacks, for demo purpose queue.
 
-numserve package API
+myqueue package API
 ####################################
 
 .. toctree::
    :maxdepth: 4
 
    mystack
+
+Developer guide
+####################################
+
+.. toctree::
+   :maxdepth: 4
+
+   develop
+   doc
 
 
 Indices and tables
