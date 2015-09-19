@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 
 """
-Implement a. stack data structure.
+Implement a stack data structure.
 
 The :mod:`myqueue.mystack` module provide one class:
 
 * :class:`MyStack`: stack data structure.
+
 """
 
 from .error import Empty
@@ -15,15 +16,19 @@ class MyStack:
     A stack data structure, where items are added and peeked at the top
 
     For example:
+
         - Create empty stack.
         - Add items 42 and 43. 
         - Peek these items.
 
     ::
 
-        |  |    |  |    |43|    |  |    |  |
-        |  | -> |42| -> |42| -> |42| -> |  |
-        +--+    +--+    +--+    +--+    +--+
+           add 42    add 43    peek 43    peek 42
+              |         |         ^         ^
+              v         v         |         |  
+        |  |      |  |      |43|      |  |      |  |
+        |  |      |42|      |42|      |42|      |  |
+        +--+      +--+      +--+      +--+      +--+
 
     >>> stack = MyStack()
     >>> stack.size
@@ -58,13 +63,13 @@ class MyStack:
         return self._size
 
     def add(self, item):
-        """Add a item of the top of the stack"""
+        """Add an item at the top of the stack"""
         self._size += 1
         self._items.append(item)
 
     def peek(self):
         """
-        Peek a item from the top of the stack
+        Peek an item from the top of the stack
         
         If the stack is empty, raises :class:`myqueue.Empty`.
         """
